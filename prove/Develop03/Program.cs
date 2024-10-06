@@ -15,7 +15,7 @@ class Program
         while (true)
         {
             Console.Clear();
-            Scripture scripture = task.RandomScriture();
+            Scripture scripture = task.RandomScripture();
 
             if (scripture != null)
             {
