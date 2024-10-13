@@ -1,4 +1,4 @@
-public class Address
+class Address
 {
     private string _streetAddress {get; set;}
     private string _city {get; set;}
@@ -7,12 +7,15 @@ public class Address
 
     public Address (string streetAddress, string city, string state, string country)
     {
-
+        _streetAddress = streetAddress;
+        _city = city;
+        _state = state;
+        _country = country;
     }
 
     public void SetCountry(string country)
     {
-
+        _country = country;
     }
     public string GetCountry()
     {
