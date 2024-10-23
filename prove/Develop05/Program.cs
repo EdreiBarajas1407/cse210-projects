@@ -1,5 +1,5 @@
 using System;
-
+//Keeping a log of how many times activities were performed is what I tried to do to exceed the requirements.
 class Program
 {
     static void Main(string[] args)
