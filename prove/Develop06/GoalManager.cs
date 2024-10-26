@@ -15,7 +15,7 @@ public class GoalManager
     public void Start()
     {
         
-        string theMenu = "\n1. Create New Goal ⚽️ | 2. List Goals 🧾 | 3. Save Goals 🗳️ | 4. Load Goals ♽ | 5. Record Event 📝 | 6. Quit ❌\n";
+        string theMenu = "\n1. Create New Goal | 2. List Goals | 3. Save Goals | 4. Load Goals | 5. Record Event | 6. Quit\n";
         bool isAppOn = true;
 
         do
@@ -73,7 +73,7 @@ public class GoalManager
         }
         else 
         {
-            Console.WriteLine("🗑️ - The list of goals is empty. Either load your saved goals or create new ones");
+            Console.WriteLine("The list of goals is empty. Either load your saved goals or create new ones");
         }
     }
 
@@ -90,7 +90,7 @@ public class GoalManager
         }
         else 
         {
-            Console.WriteLine("🗑️ - The list of goals is empty. Either load your saved goals or create new ones");
+            Console.WriteLine("The list of goals is empty. Either load your saved goals or create new ones");
         }
     }
 
@@ -118,7 +118,7 @@ public class GoalManager
         }
         else
         {
-            Console.WriteLine("❗️Invalid: This option does not exist.");
+            Console.WriteLine("Invalid: This option does not exist.");
         }
     }
 
@@ -133,7 +133,7 @@ public class GoalManager
         goalAccomplished.RecordEvent();
         _score += goalAccomplished.GetCurrentPoint();
 
-        string congratMessage = $"\n🎉Congratulations🎉! You have earned {goalAccomplished.GetSetPoint()}\nYou now have {_score} points";
+        string congratMessage = $"\nCongratulations! You have earned {goalAccomplished.GetSetPoint()}\nYou now have {_score} points";
         Console.WriteLine(congratMessage);
         DisplayPlayerPoint();
     }
@@ -164,11 +164,11 @@ public class GoalManager
 
         if (files.Length != 0)
         {
-            Console.WriteLine("These are the saved files 📑:");
+            Console.WriteLine("These are the saved files:");
             foreach (string file in files)    
             {
                 _count++;
-                Console.WriteLine($"{_count}. {Path.GetFileNameWithoutExtension(file)} 📄");
+                Console.WriteLine($"{_count}. {Path.GetFileNameWithoutExtension(file)}");
             }
             _count = 0;
 
@@ -180,9 +180,6 @@ public class GoalManager
         } 
         else Console.WriteLine("There are no files saved in your Saved-Folder");
     }
-
-////////////////////////////////////////////////////////////////////////////////
-///////// Helper functions
     private string SetGoalName()
     {
         Console.Write("\nWhat is the name of the goal? : ");
@@ -213,7 +210,7 @@ public class GoalManager
 
     private int SetCheckListCount()
     {
-        Console.Write("\nHow many times do you want to set for this goal to be completed? : ");
+        Console.Write("\nHow many times do you want to set for this goal to be completed?: ");
         int _checklistCount = int.Parse(Console.ReadLine());
         return _checklistCount;
     }
@@ -264,7 +261,7 @@ public class GoalManager
                 initialGoal.Add(checkListGoal);
             }
         }
-        Console.WriteLine("\nFile loaded Successfully ✅");
+        Console.WriteLine("\nFile loaded Successfully");
         return initialGoal;
     }
 }
