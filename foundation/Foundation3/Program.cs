@@ -6,15 +6,14 @@ class Program
     {
         List<Activity> activitiesList = new List<Activity>();
 
-        Running running = new Running(30, 3);
+        Running running = new Running(40, 5);
         activitiesList.Add(running);
-        Cycling cycling = new Cycling(45, 16);
+        Cycling cycling = new Cycling(30, 10);
         activitiesList.Add(cycling);
-        Swimming swimming = new Swimming(60, 40);
+        Swimming swimming = new Swimming(68, 25);
         activitiesList.Add(swimming);
 
 
-        //display activity summaries
         foreach (Activity activity in activitiesList)
         {
             activity.DisplaySummary();
